@@ -1,0 +1,21 @@
+What is DevOps?
+
+1. AWS DevOps Overview
+
+https://aws.amazon.com/devops/what-is-devops/
+
+2. Azure DevOps Overview
+
+https://azure.microsoft.com/en-us/overview/what-is-devops/
+
+3. Atlassian DevOps Overview
+
+https://www.atlassian.com/devops
+
+4. Periodic Table of DevOps Tools
+
+https://digital.ai/periodic-table-of-devops-tools
+
+5. What is DevOps? The Ultimate Guide
+
+https://searchitoperations.techtarget.com/definition/DevOps

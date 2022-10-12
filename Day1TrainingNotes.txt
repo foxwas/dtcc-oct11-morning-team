@@ -1,0 +1,155 @@
+Good Morning!
+
+Agenda
+-- Devops
+-- Git 
+Labs 1, and 2 
+
+
+Let us test lab machines.
+
+
+Devops?
+
+-- idea to integrate development side and operations side
+-- build a product to deploy and prod use -- get users feedback
+-- continuous process -- development, integration, testing, deployment, operations, management, feedback	
+
+developer team -- modify method and build
+testing team  -- modify test cases
+integration team -- integrate with appropriate components
+deployment team-- build and deploy
+sysAdmin team -- run the newer version of the app
+
+
+DevOps == Development + Operations
+the way to succeed the whole software product
+
+Team development
+
+business team, developers, tester, database administrator, sys admin,
+integration team, release team, support
+-------------------------------------------------------
+customers/clients 			-- 
+
+business team				-- 	
+
+
+developers -- front end developers 	-- 
+
+middleware/Service developer		-- 
+-- server side work, business logic
+
+backend/dba professionals		-- 
+
+release team				-- 
+
+operations/sys admin team		-- 
+
+App owners 				-- 
+
+-----------------------------------------------------------
+
+Plan ---> Code ---> Build ---> Test --> Release --> Deploy --> Manage --> Monitor
+
+Dev: Plan ---> Code ---> Build ---> Test
+Ops: Release --> Deploy --> Manage --> Monitor
+
+
+Plan ---> Code ---> Build ---> Test 
+	--> Release --> Deploy --> Operate --> Monitor 
+
+		--> Feedback to Plan --> Code --> Build --> Test
+				--> Release --> Deploy --> Manage --> Monitor
+
+				-> Feedback to Plan --> Code --> Build --> Test
+					--> Release --> Deploy --> Manage --> Monitor
+
+
+continuous execution of software development ---> production
+
+
+Code -- Java, Javascript 
+
+Code Repository -- git, svn, cvs
+
+Build --  maven, gradle, npm
+
+Test --Unit test, Functional Test -- UI test
+
+Integration Test -- integrate components and test
+QA Test 
+
+Release -- ready to go prod live!
+	- containerize the app and ready to deploy
+	- docker container
+Deploy -- deploy to prod deployment
+	- kubernetes deployment
+
+Operate -- create cluster of multiple instances
+	-- start, stop, update, scale up or down
+
+Monitor -- Logging, Performance Metrics, Tracing
+
+
+How to automate these DevOps tasks?
+
+Create a pipeline: CI - CD pipelines  -- Jenkins
+
+
+DevOps Tools
+
+https://digital.ai/periodic-table-of-devops-tools
+
+Software configuration management
+
+https://git-scm.com/book/en/v2
+
+Lab 1 Version Control Git 
+
+Lab 2 Branching, Merging and working remote repos
+
+Remote repository example:
+https://github.com/saravanankuppusamy/dtcc-customerapi
+
+
+
+Customer 
+--> UI ---> Login 
+		--> search for flight, hotel and car availability
+		--> make flight, hotel and car booking
+			--> booking data on hold
+		--> submit payment information
+			--> process payment
+			--> comit booking data
+			--> update flight, hotel and car inventory
+		--> send confirmation to customer
+			
+
+CustomerService
+ReservationService
+	CarReservationService
+		HertzService
+		NationalService
+		AlamoService
+	FlightReservationService
+		AmericanAirlineService
+		DeltaAirService
+		UnitedAirService
+	HotelReservationService
+		MarriottService
+		HiltonService
+PaymentService
+	VisaPayService
+	MasterCardService
+	AmexService
+	PaypalService
+
+
+https://microservices.io/
+
+https://microservices.io/patterns/monolithic.html
+https://microservices.io/patterns/microservices.html
+
+
+
