@@ -1,0 +1,178 @@
+Good Morning!
+
+Agenda
+-- Devops
+-- Git Flow
+-- Jenkins - Configuration
+-- Maven Configuration
+Lab 3, 4 and 5
+We will use VM_WA3121 -- Windows VM
+
+
+Review
+
+1. What is DevOps?
+
+oranization culture to rapidly develop, test, deploy, and maintain
+software |  services |  product
+
+Customers, Business team, Development team + Operations team + security team
+
+Culture where developers and operations IT teams interact with 
+each other frequently and actively involve from early stages till
+production deployment.
+
+Accountability, Automation, Analytics and Culture of Collaboration
+
+CAMS
+Culture
+Automation
+Measurement
+Sharing knowledge
+
+CALMS
+Culture
+Automation
+Lean
+Measurememt
+Sharing
+
+
+plan ---> code --> build ---> test --> release --> deploy ---> operate --> monitor
+feedback
+
+continuous integration
+continuous delivery
+continuous deployment
+continuous feedback
+
+2. What is git?
+
+version controlled app code repository for team development 
+
+3. What is git flow?
+
+git extensions
+
+branches 
+
+- master
+- develop
+- release
+- feature
+- hotfix
+
+master --> develop -----------> release --> master
+		--> feature 
+------------------------------------------------------------
+AWS Code Commit Vs GitHub
+https://comparisons.financesonline.com/aws-codecommit-vs-github
+______________________________________________________________________
+Customer 
+--> UI ---> Login 
+		--> search for flight, hotel and car availability
+		--> make flight, hotel and car booking
+			--> booking data on hold
+		--> submit payment information
+			--> process payment
+			--> comit booking data
+			--> update flight, hotel and car inventory
+		--> send confirmation to customer
+			
+
+CustomerService
+ReservationService
+	CarReservationService
+		HertzService
+		NationalService
+		AlamoService
+	FlightReservationService
+		AmericanAirlineService
+		DeltaAirService
+		UnitedAirService
+	HotelReservationService
+		MarriottService
+		HiltonService
+PaymentService
+	VisaPayService
+	MasterCardService
+	AmexService
+	PaypalService
+
+
+https://microservices.io/
+
+https://microservices.io/patterns/monolithic.html
+https://microservices.io/patterns/microservices.html
+---------------------------------------------------------------------------------------
+
+CI, CD, CD
+
+CI - Continuous Integration
+CD - Continuous Delivery
+CD - Continuous Deployment
+-----------------------------------------------------------------------
+Continuous Integration - CI 
+Checkout from repository --> build --> test - test good - ready to add to release
+
+example: John has added additional code and configuration in reservation service
+- connect to git repo
+- pull project code from remote repo and update local repo
+- build using maven or gradle
+- run the app
+- run unit tests
+- report unit tests results (pass | fail)
+-----------------------------------------------------------------------
+Continuous Delivery - CD
+Checkout from repository --> build --> test ---> deliver to staging to release
+	--> user acceptance tests --> Can we deploy to production? 
+	Manual approval step 
+	if approved, 
+	deploy to production --> post deploy tasks (logging, monitoring, tracing)
+
+example: Andre's build, test, all good. Ready to deploy?
+Wait a minute.. 
+Seth wants to run user acceptance tests (UAT)
+-- done and documented
+Can we deploy now? wait a minute..
+Fox will inspect it, and then approve 
+-- manual step to approve deployment
+deploy to production --> post deploy tasks (logging, monitoring, tracing)
+----------------------------------------------------------------------
+Continuous Deployment - CD (fully automated)
+checkout code from repository --> build --> test --> deliver to staging (release)
+	--> user acceptance tests --> deploy to production 	
+					--> post deploy tasks
+
+example: David has added monitoring capabilities to reservation service
+
+- connect to git repo
+- pull project code from remote repo and update local repo
+- build using maven or gradle
+- run the app
+- run unit tests
+- report unit tests results (pass | fail)
+- staging area to release 
+- user interface --> reservation service tests  - User Acceptance Test (UAT)
+- UAT tests results OK
+- containerize user interface and reservation services -- docker images
+- use docker images to create kubernetes deployment and services
+- kuberneted deployment up and running - Great!'
+- monitoring --> view from Prometheus UI 
+
+-----------------------------------------------------------------------
+
+How to automate?
+
+Jenkins
+
+https://www.jenkins.io/
+
+https://www.jenkins.io/download/
+
+https://www.jenkins.io/doc/
+
+--------------------------------------------------------------------
+
+
+
