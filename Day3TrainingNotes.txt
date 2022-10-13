@@ -1,0 +1,79 @@
+Good Morning!
+How are you doing?
+
+Agenda
+Maven Projects
+Jenkins - Job
+Lab 6, 7 and 8
+
+-----------------------------------------------------------
+
+Java Build Tools
+-- dependency management
+-- compile
+-- copy files from one dir to another dir
+-- package
+-- launch app
+-- run junit test
+
+-----------------------------------------------------
+
+Maven Central Repository
+
+https://repo.maven.apache.org/maven2/
+https://mvnrepository.com/
+----------------------------------------------------
+1. Apache ANT  -- legacy
+
+build.xml
+
+defines tasks
+
+2. Gradle
+
+build.gradle
+
+define tasks
+
+3. Maven
+
+pom.xml
+-------------------------------------------------------------------------------------
+Gradle References
+1. Gradle - Building Java Applications Sample
+https://docs.gradle.org/current/samples/sample_building_java_applications.html
+
+2. Gradle - Command-Line Interface
+https://docs.gradle.org/current/userguide/command_line_interface.html
+
+3. Gradle - Building Java & JVM projects
+https://docs.gradle.org/current/userguide/building_java_projects.html
+
+Maven References
+
+4. Maven Getting Started Guide
+https://maven.apache.org/guides/getting-started/index.html
+
+5. Maven - Introduction to the Build Lifecycle
+https://maven.apache.org/guides/introduction/introduction-to-the-lifecycle.html
+
+6. Introduction to the POM
+https://maven.apache.org/guides/introduction/introduction-to-the-pom.html
+-----------------------------------------------------------------------------------------
+
+Jenkins References
+
+Jenkins References
+
+1. Jenkins Tutorials
+
+https://www.jenkins.io/doc/tutorials/
+
+2. Jenkins Pipeline Examples
+
+https://github.com/jenkinsci/pipeline-examples
+
+3. Jenkins User Handbook
+
+https://www.jenkins.io/user-handbook.pdf
+---------------------------------------------------------------------------------------------
