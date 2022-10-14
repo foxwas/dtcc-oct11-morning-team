@@ -1,0 +1,70 @@
+Good Morning!
+How are you doing?
+
+Agenda
+
+Jenkins CD pipeline
+Continuous code quality - static analysis
+Sonarqube demo
+More Maven
+Lab 9 and Lab 10
+
+------------------------
+
+Sample CI-CD Pipeline Jenkinsfile
+-------------------------Jenkinsfile----------------------------------------------------------
+
+node{
+
+    stage ("Checkout SimpleGreeting"){
+        git branch: 'main', url: ' https://github.com/foxwas/dtcc-simplegreeting-app.git'
+    }
+    
+    stage ("Maven Build - SimpleGreeting - Clean") {
+        bat 'mvn clean'
+    }
+    
+    stage ("Maven Build - SimpleGreeting - Build") {
+        bat 'mvn package'
+    }
+	
+    stage ("Maven Build - SimpleGreeting - Test") {
+        bat 'mvn test'
+    }
+
+    stage('User Acceptance Test - SimpleGreeting') {
+	
+	def response= input message: 'Is this build good to go?',
+	   parameters: [choice(choices: 'Yes\nNo', 
+	   description: '', name: 'Pass')]
+	
+	if(response=="Yes") {
+	    stage('Deploy App - SimpleGreeting') {
+	      bat 'mvn verify'
+	    }
+	}
+    }
+
+}
+----------------------------------------------------------------------------------------------------
+
+How to use Sonarqube for static code analysis?
+
+1. start sonarqube
+
+2. Login to web User interface
+
+3. Create a project 
+
+4. Generate a token to be used for project code analysis
+
+5. Choose the type of project to analyze
+example: maven project, gradle project
+
+6. Go to project directory, run maven sonar:sonar command as follows
+
+mvn sonar:sonar -Dsonar.projectKey=DemoProject -Dsonar.host.url=http://localhost:9000 -Dsonar.login=70dedd95af6137cca46219514ab235b198d33071
+
+7. Review project analysis in the Sonar web user interface 
+
+--------------------------------------------------------------------------------------------------------
